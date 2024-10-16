@@ -3,14 +3,13 @@ name: 百度签到
 on:
     workflow_dispatch:
     schedule:
-        - cron: "30 04 * * *"
+        - cron: "30 16 * * *"
     watch:
         types: [started]
 
 jobs:
     build:
         runs-on: ubuntu-latest
-        if: github.event.repository.owner.id == github.event.sender.id
         steps:
             - uses: actions/checkout@v1
             - name: Use Node.js 10.x
