@@ -10,7 +10,6 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        if: github.event.sender.id != null
         steps:
             - uses: actions/checkout@v1
             - name: Use Node.js 10.x
